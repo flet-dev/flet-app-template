@@ -1,4 +1,4 @@
-# {%- if cookiecutter.package_manager != "poetry" -%}
+# {% if cookiecutter.package_manager != "poetry" %}
 [project]
 
 name = "{{cookiecutter.project_name}}"
