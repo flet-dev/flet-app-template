@@ -10,7 +10,7 @@ authors = [
 dependencies = [
   "flet>={{cookiecutter.flet_version}}"
 ]
-{%- else -%}
+{% else %}
 [tool.poetry]
 
 name = "{{cookiecutter.project_name}}"
