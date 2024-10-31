@@ -6,4 +6,4 @@ description = "{{cookiecutter.description}}"
 authors = [
   {name = "Flet Developer", email = "your@email.com"}
 ]
-dependencies = ["flet==0.25.0.dev3526"]
+dependencies = ["flet=={{cookiecutter.flet_version}}"]
