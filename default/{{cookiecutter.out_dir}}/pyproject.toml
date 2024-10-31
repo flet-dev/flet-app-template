@@ -1,9 +1,40 @@
+# {%- if cookiecutter.package_manager != "poetry" -%}
 [project]
 
 name = "{{cookiecutter.project_name}}"
 version = "1.0.0"
 description = "{{cookiecutter.description}}"
 authors = [
-  {name = "Flet Developer", email = "your@email.com"}
+  { name = "Flet Developer", email = "your@email.com" }
 ]
-dependencies = ["flet=={{cookiecutter.flet_version}}"]
+dependencies = [
+  "flet>={{cookiecutter.flet_version}}"
+]
+# {%- else -%}
+[tool.poetry]
+
+name = "{{cookiecutter.project_name}}"
+version = "1.0.0"
+description = "{{cookiecutter.description}}"
+authors = [
+  { name = "Flet Developer", email = "your@email.com" }
+]
+# {% endif %}
+
+# uv dev dependencies {%- if cookiecutter.package_manager == "uv" -%}
+[tool.uv]
+dev-dependencies = [
+    "flet[all]>={{cookiecutter.flet_version}}",
+]
+# Poetry dev dependencies {%- if cookiecutter.package_manager == "poetry" -%}
+[tool.poetry.dependencies]
+python = "^3.12"
+flet = {version = "^{{cookiecutter.flet_version}}"}
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "^{{cookiecutter.flet_version}}"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+# {% endif %}
