@@ -35,13 +35,13 @@ copyright = "Copyright (C) 2024 by MyCompany"
 [tool.flet.app]
 path = "src"
 
-{%- if cookiecutter.package_manager == "uv" -%}
+{%- if cookiecutter.package_manager == "uv" %}
 
 [tool.uv]
 dev-dependencies = [
     "flet[all]>={{cookiecutter.flet_version}}",
 ]
-{%- elif cookiecutter.package_manager == "poetry" -%}
+{%- elif cookiecutter.package_manager == "poetry" %}
 
 [tool.poetry.dependencies]
 python = "^3.8"
