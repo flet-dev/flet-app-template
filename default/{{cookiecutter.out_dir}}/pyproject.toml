@@ -27,10 +27,10 @@ org = "com.mycompany"
 product = "{{cookiecutter.project_name}}"
 
 # company name to display in about app dialogs
-company = "My Company"
+company = "Flet"
 
 # copyright text to display in about app dialogs
-copyright = "Copyright (C) 2024 by MyCompany"
+copyright = "Copyright (C) 2024 by Flet"
 
 [tool.flet.app]
 path = "src"
