@@ -6,7 +6,7 @@ description = "{{cookiecutter.description}}"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
-  "flet>={{cookiecutter.flet_version}}"
+  "flet=={{cookiecutter.flet_version}}"
 ]
 {% else %}
 [tool.poetry]
@@ -39,16 +39,16 @@ path = "src"
 
 [tool.uv]
 dev-dependencies = [
-    "flet[all]>={{cookiecutter.flet_version}}",
+    "flet[all]=={{cookiecutter.flet_version}}",
 ]
 {%- elif cookiecutter.package_manager == "poetry" %}
 
 [tool.poetry.dependencies]
 python = "^3.8"
-flet = {version = "^{{cookiecutter.flet_version}}"}
+flet = {version = "{{cookiecutter.flet_version}}"}
 
 [tool.poetry.group.dev.dependencies]
-flet = {extras = ["all"], version = "^{{cookiecutter.flet_version}}"}
+flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
 
 [build-system]
 requires = ["poetry-core"]
