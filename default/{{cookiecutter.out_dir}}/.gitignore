@@ -160,5 +160,4 @@ cython_debug/
 #.idea/
 
 # Flet
-#data/
-#temp/
+storage/
