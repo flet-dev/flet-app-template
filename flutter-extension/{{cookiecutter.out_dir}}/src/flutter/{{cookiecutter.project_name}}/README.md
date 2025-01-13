@@ -1,3 +1,4 @@
-# Flet `Spinkit` control
+# {{cookiecutter.project_name}}
+{{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} control for Flet
 
-`Spinkit` control to use in Flet apps.
+TODO: Add your control documentation here.

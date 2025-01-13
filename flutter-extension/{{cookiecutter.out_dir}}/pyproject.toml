@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "{{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} control for Flet"
 readme = "README.md"
 authors = [
-    { name = "Flet contributors", email = "hello@youremail.dev" }
+    { name = "Flet contributors", email = "hello@myemail.dev" }
 ]
 requires-python = ">=3.8"
 dependencies = [
