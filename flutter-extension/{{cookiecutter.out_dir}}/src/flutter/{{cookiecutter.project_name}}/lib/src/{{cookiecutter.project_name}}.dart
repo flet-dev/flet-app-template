@@ -14,8 +14,8 @@ class {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|
   @override
   Widget build(BuildContext context) {
     var color = control.attrColor("color", context);
-    var value = control.attrString("value");
-    Widget myControl = Text(value, style: TextStyle(color: color),);
+    String text = control.attrString("value", "")!;
+    Widget myControl = Text(text, style: TextStyle(color: color),);
 
 
     return constrainedControl(context, myControl, parent, control);

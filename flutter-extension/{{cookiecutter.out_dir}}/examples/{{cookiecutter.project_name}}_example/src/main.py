@@ -10,13 +10,13 @@ def main(page: ft.Page):
     page.add(
         ft.Stack(
             [
-                ft.Container(height=200, width=200, bgcolor=ft.colors.BLUE_100),
+                ft.Container(height=300, width=300, bgcolor=ft.colors.BLUE_100),
                 {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}(
                     opacity=0.5,
                     tooltip="My new control tooltip",
-                    top=0,
+                    top=100,
                     left=0,
-                    value = "My new {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} Flet Control"
+                    value = "My new {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} Flet Control", 
                     color=ft.Colors.RED,
                 ),
             ]
