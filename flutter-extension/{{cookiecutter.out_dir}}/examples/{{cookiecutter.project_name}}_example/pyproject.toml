@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
   "{{cookiecutter.project_name}}",
-  "flet==0.26.0",
+  "flet==0.26.0.dev3957",
 ]
 
 
@@ -30,5 +30,5 @@ path = "src"
 
 [tool.uv]
 dev-dependencies = [
-    "flet[all]==0.26.0",
+    "flet[all]==0.26.0.dev3957",
 ]
