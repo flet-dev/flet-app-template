@@ -16,7 +16,7 @@ def main(page: ft.Page):
                     tooltip="My new control tooltip",
                     top=0,
                     left=0,
-                    value = "My new Flet Control"
+                    value = "My new {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} Flet Control"
                     color=ft.Colors.RED,
                 ),
             ]
