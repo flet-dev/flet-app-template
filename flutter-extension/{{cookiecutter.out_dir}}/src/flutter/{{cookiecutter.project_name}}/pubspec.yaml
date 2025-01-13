@@ -1,4 +1,4 @@
-name: flet_spinkit
+name: {{cookiecutter.project_name}}
 description: Flet Spinkit control
 repository: https://github.com/InesaFitsner/flet-spinkit/src/flutter/flet_spinkit
 version: 0.1.0
