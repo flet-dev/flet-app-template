@@ -1,56 +1,36 @@
-{%- if cookiecutter.package_manager != "poetry" -%}
 [project]
-name = "{{cookiecutter.project_name}}"
+name = "flet-spinkit"
 version = "0.1.0"
-description = "{{cookiecutter.description}}"
+description = "Spinkit control for Flet"
 readme = "README.md"
+authors = [
+    { name = "Flet contributors", email = "hello@flet.dev" }
+]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+]
 requires-python = ">=3.8"
 dependencies = [
-  "flet=={{cookiecutter.flet_version}}"
+    "flet==0.26.0.dev3957",
 ]
-{% else %}
-[tool.poetry]
-name = "{{cookiecutter.project_name}}"
-version = "0.1.0"
-description = "{{cookiecutter.description}}"
-authors = ["Flet Developer <your@email.com>"]
-readme = "README.md"
-{% endif %}
 
-[tool.flet]
-# org name in reverse domain name notation, e.g. "com.mycompany".
-# Combined with project.name to build bundle ID for iOS and Android apps
-org = "com.mycompany"
+[project.urls]
+Homepage = "https://flet.dev"
+Documentation = "https://github.com/InesaFitsner/flet-spinkit"
+Repository = "https://github.com/InesaFitsner/flet-spinkit"
+Issues = "https://github.com/InesaFitsner/flet-spinkit/issues"
 
-# project display name that is used as an app title on Android and iOS home screens,
-# shown in window titles and about app dialogs on desktop.
-product = "{{cookiecutter.project_name}}"
-
-# company name to display in about app dialogs
-company = "Flet"
-
-# copyright text to display in about app dialogs
-copyright = "Copyright (C) 2024 by Flet"
-
-[tool.flet.app]
-path = "src"
-
-{%- if cookiecutter.package_manager == "uv" %}
+[tool.setuptools.package-data]
+"flutter.flet_spinkit" = ["**/*"]
 
 [tool.uv]
 dev-dependencies = [
-    "flet[all]=={{cookiecutter.flet_version}}",
+    "flet[all]==0.26.0.dev3957",
 ]
-{%- elif cookiecutter.package_manager == "poetry" %}
 
-[tool.poetry.dependencies]
-python = "^3.8"
-flet = {version = "{{cookiecutter.flet_version}}"}
-
-[tool.poetry.group.dev.dependencies]
-flet = {extras = ["all"], version = "{{cookiecutter.flet_version}}"}
+[tool.setuptools]
+license-files = []
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-{% endif %}
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
