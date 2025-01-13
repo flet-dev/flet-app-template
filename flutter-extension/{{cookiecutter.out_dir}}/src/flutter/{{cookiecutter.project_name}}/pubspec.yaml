@@ -1,5 +1,5 @@
 name: {{cookiecutter.project_name}}
-description: Flet {{cookiecutter.project_name.split('_')|map('capitalize')|join}} control
+description: Flet {{cookiecutter.project_name.split('_','-')|map('capitalize')|join}} control
 repository: https://github.com/InesaFitsner/flet-spinkit/src/flutter/flet_spinkit
 version: 0.1.0
 homepage: https://github.com/InesaFitsner/flet-spinkit
