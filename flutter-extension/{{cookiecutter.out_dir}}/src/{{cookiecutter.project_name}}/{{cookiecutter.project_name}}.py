@@ -6,14 +6,9 @@ from flet.core.control import OptionalNumber
 from flet.core.types import ColorEnums, ColorValue
 
 
-class SpinkitType(Enum):
-    ROTATING_CIRCLE = "rotatingcircle"
-    FOLDING_CUBE = "foldingcube"
-
-
-class Spinkit(ConstrainedControl):
+class {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}(ConstrainedControl):
     """
-    Spinkit Control.
+    {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} Control.
     """
 
     def __init__(
@@ -33,11 +28,10 @@ class Spinkit(ConstrainedControl):
         right: OptionalNumber = None,
         bottom: OptionalNumber = None,
         #
-        # Spinkit specific
+        # {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} specific
         #
-        color: Optional[str] = None,
-        size: OptionalNumber = None,
-        spinkit_type: Optional[SpinkitType] = None,
+        color: Optional[ColorValue] = None,
+        value: Optional[str] = None,
     ):
         ConstrainedControl.__init__(
             self,
@@ -51,12 +45,11 @@ class Spinkit(ConstrainedControl):
             bottom=bottom,
         )
 
-        self.color = color
-        self.size = size
-        self.spinkit_type = spinkit_type
+        #self.color = color
+        self.value = value
 
     def _get_control_name(self):
-        return "spinkit"
+        return "{{cookiecutter.project_name}}"
 
     # color
     @property
@@ -68,23 +61,11 @@ class Spinkit(ConstrainedControl):
         self.__color = value
         self._set_enum_attr("color", value, ColorEnums)
 
-    # size
+    # value
     @property
-    def size(self):
-        return self._get_attr("size")
+    def value(self):
+        return self._get_attr("value")
 
-    @size.setter
-    def size(self, value):
-        self._set_attr("size", value)
-
-    # spinkit_type
-    @property
-    def spinkit_type(self) -> Optional[SpinkitType]:
-        return self.__spinkit_type
-
-    @spinkit_type.setter
-    def spinkit_type(self, value: Optional[SpinkitType]):
-        self.__spinkit_type = value
-        self._set_attr(
-            "spinkittype", value.value if isinstance(value, SpinkitType) else value
-        )
+    @value.setter
+    def value(self, value):
+        self._set_attr("value", value)

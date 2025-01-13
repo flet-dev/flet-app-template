@@ -1,6 +1,6 @@
 import flet as ft
 
-from flet_spinkit import Spinkit, SpinkitType
+from {{cookiecutter.project_name}} import {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}
 
 
 def main(page: ft.Page):
@@ -11,14 +11,13 @@ def main(page: ft.Page):
         ft.Stack(
             [
                 ft.Container(height=200, width=200, bgcolor=ft.colors.BLUE_100),
-                Spinkit(
+                {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}(
                     opacity=0.5,
-                    tooltip="Spinkit tooltip",
+                    tooltip="My new control tooltip",
                     top=0,
                     left=0,
+                    value = "My new Flet Control"
                     color=ft.Colors.RED,
-                    size=150,
-                    spinkit_type=SpinkitType.FOLDING_CUBE,
                 ),
             ]
         )

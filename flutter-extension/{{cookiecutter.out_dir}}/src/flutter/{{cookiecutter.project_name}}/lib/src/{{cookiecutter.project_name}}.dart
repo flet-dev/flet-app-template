@@ -14,30 +14,10 @@ class {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|
   @override
   Widget build(BuildContext context) {
     var color = control.attrColor("color", context);
-    var size = control.attrDouble("size");
-    var spinkitType = control.attrString("spinkittype");
-    late Widget spinkitControl;
+    var value = control.attrString("value");
+    Widget myControl = Text(value, style: TextStyle(color: color),);
 
-    switch (spinkitType) {
-      case "rotatingcircle":
-        spinkitControl = SpinKitRotatingCircle(
-          color: color,
-          size: size ?? 50,
-        );
-        break;
-      case "foldingcube":
-        spinkitControl = SpinKitFoldingCube(
-          color: color,
-          size: size ?? 50,
-        );
-        break;
-      default:
-        spinkitControl = SpinKitPumpingHeart(
-          color: color,
-          size: size ?? 50,
-        );
-    }
 
-    return constrainedControl(context, spinkitControl, parent, control);
+    return constrainedControl(context, myControl, parent, control);
   }
 }

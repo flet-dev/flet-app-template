@@ -1,1 +1,1 @@
-from flet_spinkit.spinkit import Spinkit, SpinkitType
+from {{cookiecutter.project_name}}.{{cookiecutter.project_name}} import {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}
