@@ -1,6 +1,6 @@
 import 'package:flet/flet.dart';
 
-import 'spinkit.dart';
+import '{{cookiecutter.project_name}}.dart';
 
 CreateControlFactory createControl = (CreateControlArgs args) {
   switch (args.control.type) {
