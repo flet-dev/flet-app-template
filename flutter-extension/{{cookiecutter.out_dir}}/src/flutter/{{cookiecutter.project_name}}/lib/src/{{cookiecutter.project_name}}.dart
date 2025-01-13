@@ -1,11 +1,11 @@
 import 'package:flet/flet.dart';
 import 'package:flutter/material.dart';
 
-class SpinkitControl extends StatelessWidget {
+class {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}Control extends StatelessWidget {
   final Control? parent;
   final Control control;
 
-  const SpinkitControl({
+  const {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}Control({
     super.key,
     required this.parent,
     required this.control,
