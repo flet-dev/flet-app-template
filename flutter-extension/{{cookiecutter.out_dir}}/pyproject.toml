@@ -1,31 +1,28 @@
 [project]
-name = "flet-spinkit"
+name = "{{cookiecutter.project_name}}"
 version = "0.1.0"
-description = "Spinkit control for Flet"
+description = "{{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} control for Flet"
 readme = "README.md"
 authors = [
-    { name = "Flet contributors", email = "hello@flet.dev" }
-]
-classifiers = [
-  "License :: OSI Approved :: Apache Software License",
+    { name = "Flet contributors", email = "hello@youremail.dev" }
 ]
 requires-python = ">=3.8"
 dependencies = [
-    "flet==0.26.0.dev3957",
+    "flet>=0.26.0",
 ]
 
 [project.urls]
-Homepage = "https://flet.dev"
-Documentation = "https://github.com/InesaFitsner/flet-spinkit"
-Repository = "https://github.com/InesaFitsner/flet-spinkit"
-Issues = "https://github.com/InesaFitsner/flet-spinkit/issues"
+Homepage = "https://mydomain.dev"
+Documentation = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}"
+Repository = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}"
+Issues = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/issues"
 
 [tool.setuptools.package-data]
-"flutter.flet_spinkit" = ["**/*"]
+"flutter.{{cookiecutter.project_name}}" = ["**/*"]
 
 [tool.uv]
 dev-dependencies = [
-    "flet[all]==0.26.0.dev3957",
+    "flet[all]>=0.26.0",
 ]
 
 [tool.setuptools]
