@@ -8,7 +8,7 @@ authors = [
 ]
 requires-python = ">=3.8"
 dependencies = [
-    "flet==0.26.0.dev3957",
+    "flet>={{cookiecutter.flet_version}}",
 ]
 
 [project.urls]
@@ -22,7 +22,7 @@ Issues = "https://github.com/MyGithubAccount/{{cookiecutter.project_name}}/issue
 
 [tool.uv]
 dev-dependencies = [
-    "flet[all]==0.26.0.dev3957",
+    "flet[all]>={{cookiecutter.flet_version}}",
 ]
 
 [tool.setuptools]
