@@ -6,9 +6,9 @@ from flet.core.control import OptionalNumber
 from flet.core.types import ColorEnums, ColorValue
 
 
-class {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}(ConstrainedControl):
+class {{cookiecutter.control_name}}(ConstrainedControl):
     """
-    {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} Control.
+    {{cookiecutter.control_name}} Control.
     """
 
     def __init__(

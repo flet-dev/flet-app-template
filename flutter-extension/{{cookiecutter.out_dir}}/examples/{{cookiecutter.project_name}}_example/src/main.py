@@ -1,6 +1,6 @@
 import flet as ft
 
-from {{cookiecutter.project_name}} import {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}
+from {{cookiecutter.project_name}} import {{cookiecutter.control_name}}
 
 
 def main(page: ft.Page):
@@ -11,12 +11,12 @@ def main(page: ft.Page):
         ft.Stack(
             [
                 ft.Container(height=300, width=300, bgcolor=ft.colors.BLUE_100),
-                {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}(
+                {{cookiecutter.control_name}}(
                     opacity=0.5,
                     tooltip="My new control tooltip",
                     top=100,
                     left=0,
-                    value = "My new {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} Flet Control", 
+                    value = "My new {{cookiecutter.control_name}} Flet Control", 
                     color=ft.Colors.RED,
                 ),
             ]

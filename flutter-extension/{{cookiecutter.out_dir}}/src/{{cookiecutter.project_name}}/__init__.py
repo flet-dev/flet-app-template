@@ -1,1 +1,1 @@
-from {{cookiecutter.project_name}}.{{cookiecutter.project_name}} import {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}
+from {{cookiecutter.project_name}}.{{cookiecutter.project_name}} import {{cookiecutter.control_name}}
