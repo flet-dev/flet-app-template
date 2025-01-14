@@ -28,7 +28,7 @@ class {{cookiecutter.control_name}}(ConstrainedControl):
         right: OptionalNumber = None,
         bottom: OptionalNumber = None,
         #
-        # {{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}} specific
+        # {{cookiecutter.control_name}} specific
         #
         color: Optional[ColorValue] = None,
         value: Optional[str] = None,
