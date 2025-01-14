@@ -4,5 +4,6 @@
     "flet_version": "",
     "package_manager": "",
     "description": "",
-    "control_name": "{{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}"
+    "control_name": "{{cookiecutter.project_name.replace('-','_').split('_')|map('capitalize')|join}}",
+    "sep": "/"
 }
