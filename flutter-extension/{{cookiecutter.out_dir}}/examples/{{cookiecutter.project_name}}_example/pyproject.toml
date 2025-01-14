@@ -5,7 +5,7 @@ description = ""
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
-  "{{cookiecutter}}",
+  "file://{{cookiecutter._output_dir}}/{{cookiecutter.out_dir}}"",
   "flet==0.26.0.dev3957",
 ]
 
