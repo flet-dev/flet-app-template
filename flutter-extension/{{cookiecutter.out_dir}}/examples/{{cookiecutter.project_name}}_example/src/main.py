@@ -8,19 +8,13 @@ def main(page: ft.Page):
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
     page.add(
-        ft.Stack(
-            [
-                ft.Container(height=300, width=300, bgcolor=ft.colors.BLUE_100),
-                {{cookiecutter.control_name}}(
-                    opacity=0.5,
-                    tooltip="My new control tooltip",
-                    top=100,
-                    left=0,
+
+                ft.Container(height=300, width=300, bgcolor=ft.colors.BLUE_100, content={{cookiecutter.control_name}}(
+                    tooltip="My new {{cookiecutter.control_name}} Control tooltip",
                     value = "My new {{cookiecutter.control_name}} Flet Control", 
                     color=ft.Colors.RED,
-                ),
-            ]
-        )
+                ),),
+
     )
 
 

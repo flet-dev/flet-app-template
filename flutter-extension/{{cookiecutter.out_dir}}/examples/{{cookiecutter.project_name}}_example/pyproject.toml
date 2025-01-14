@@ -23,7 +23,7 @@ product = "{{cookiecutter.project_name}}_example"
 company = "Flet"
 
 # copyright text to display in about app dialogs
-copyright = "Copyright (C) 2024 by MyCompany"
+copyright = "Copyright (C) 2025 by MyCompany"
 
 [tool.flet.app]
 path = "src"
